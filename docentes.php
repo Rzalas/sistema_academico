@@ -44,7 +44,7 @@ include "include/verificar_sesion.php";
                     <h2>Relacion de Docentes</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="docente.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -57,27 +57,27 @@ include "include/verificar_sesion.php";
                           <th>Id</th>
                           <th>DNI</th>
                           <th>APELLIDOS Y NOMBRES</th>
-                          <th>DIRECCION</th>
-                          <th>CARRERA</th>
-                          <th>SEMESTRE</th>
+                          <th>FECHA DE NACIMIENTO</th>
+                          <th>CORREO</th>
+                          <th>TELEFONO</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_estudiantes = buscarEstudiantes($conexion);
-                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                        $b_docentes = buscarDocentes($conexion);
+                        while ($res_b_docentes = mysqli_fetch_array($b_docentes)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_estudiantes['id']; ?></td>
-                          <td><?php echo $res_b_estudiantes['dni']; ?></td>
-                          <td><?php echo $res_b_estudiantes['apellidos_nombres'];  ?></td>
-                          <td><?php echo $res_b_estudiantes['direccion']; ?></td>
-                          <td><?php echo $res_b_estudiantes['id_programa_estudios']; ?></td>
-                          <td><?php echo $res_b_estudiantes['id_semestre']; ?></td>
+                          <td><?php echo $res_b_docentes['id']; ?></td>
+                          <td><?php echo $res_b_docentes['dni']; ?></td>
+                          <td><?php echo $res_b_docentes['apellidos_nombres'];  ?></td>
+                          <td><?php echo $res_b_docentes['fecha_nac']; ?></td>
+                          <td><?php echo $res_b_docentes['correo']; ?></td>
+                          <td><?php echo $res_b_docentes['telefono']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
