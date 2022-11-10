@@ -33,7 +33,7 @@ include "include/busquedas.php";
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <?php include "include/menu.php" ?>  
+        <?php include "include/menu.php"; ?>  
         <!-- Menu en la parte superior -->
         <!-- page content -->
         <div class="right_col" role="main">

@@ -41,7 +41,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Datos Institucionales</h2>
+                    <h2>Condición</h2>
                     <ul class="nav navbar-right">
                       <li>
                         <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
@@ -54,37 +54,24 @@ include "include/verificar_sesion.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>codigo modular</th>
-                          <th>RUC</th>
-                          <th>NOMBRE DE LA INSTITUCIÓN</th>
-                          <th>DEPARTAMENTO</th>
-                          <th>PROVINCIA</th>
-                          <th>DISTRITO</th>
-                          <th>DIRECCION</th>
-                          <th>TELEFONO</th>
-                          <th>NUMERO RESOLUCION</th>
+                          <th>Id</th>
+                          <th>DESCRIPCIÓN</th>
+                          <th>CODIGO</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_datos_institucionales = buscardatos_institucionales($conexion);
-                        while ($res_b_datos_institucionales = mysqli_fetch_array($b_datos_institucionales)) {
+                        $b_condicion = buscarCondicion($conexion);
+                        while ($res_b_condicion = mysqli_fetch_array($b_condicion)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_datos_institucionales['cod_modular']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['ruc']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['nombre_institucion']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['departamento']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['provincia']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['distrito']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['direccion']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['telofono']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['correo']; ?></td>
-                          <td><?php echo $res_b_datos_institucionales['nro_resolucion']; ?></td>
+                          <td><?php echo $res_b_condicion['id']; ?></td>
+                          <td><?php echo $res_b_condicion['descripcion']; ?></td>
+                          <td><?php echo $res_b_condicion['codigo']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_datos_institucionales['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_datos_institucionales['datos_institucionales']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_condicion['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_condicion['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

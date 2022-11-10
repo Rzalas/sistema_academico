@@ -1,7 +1,8 @@
 <?php 
+include "include/verificar_sesion.php";
 include "include/conexion.php"; 
 include "include/busquedas.php";
-include "include/verificar_sesion.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,7 @@ include "include/verificar_sesion.php";
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <?php include "include/menu.php" ?>  
+        <?php include "include/menu.php"; ?>  
         <!-- Menu en la parte superior -->
         <!-- page content -->
         <div class="right_col" role="main">
@@ -137,12 +138,12 @@ include "include/verificar_sesion.php";
     $('#example').DataTable({
       "language":{
     "processing": "Procesando...",
-    "lengthMenu": "Mostrar _MENU_ registros",
+    "lengthMenu": "Mostrar MENU registros",
     "zeroRecords": "No se encontraron resultados",
     "emptyTable": "Ningún dato disponible en esta tabla",
-    "sInfo": "Mostrando del _START_ al _END_ de un total de _TOTAL_ registros",
+    "sInfo": "Mostrando del START al END de un total de TOTAL registros",
     "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+    "infoFiltered": "(filtrado de un total de MAX registros)",
     "search": "Buscar:",
     "infoThousands": ",",
     "loadingRecords": "Cargando...",
