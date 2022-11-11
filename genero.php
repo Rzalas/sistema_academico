@@ -44,7 +44,7 @@ include "include/verificar_sesion.php";
                     <h2>Genero</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="gener.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -68,8 +68,8 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_genero['id']; ?></td>
                           <td><?php echo $res_b_genero['genero']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

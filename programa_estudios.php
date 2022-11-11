@@ -11,7 +11,7 @@ include "include/verificar_sesion.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gentelella Alela! | </title>
+    <title>Programa de estudios! | </title>
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -41,10 +41,11 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Cargo</h2>
+                    <h2>Programa de estudios</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="cargo.php" class="btn btn-success">Agregar Nuevo</a>
+                        <!-- cambiar para q te dirija al registro -->
+                        <a href="programas_estudios.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -55,21 +56,27 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>DESCRIPCIÓN</th>
+                          <th>codigo</th>
+                          <th>tipo</th>
+                          <th>nombre</th>
+                          <th>resolucion</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_cargo = buscarCargo($conexion);
-                        while ($res_b_cargo = mysqli_fetch_array($b_cargo)) {
+                        $b_programa_estudios = buscarProgramaEstudio($conexion);
+                        while ($res_b_programa_estudios = mysqli_fetch_array($b_programa_estudios)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_cargo['id']; ?></td>
-                          <td><?php echo $res_b_cargo['descripcion']; ?></td>
+                          <td><?php echo $res_b_programa_estudios['id']; ?></td>
+                          <td><?php echo $res_b_programa_estudios['codigo']; ?></td>
+                          <td><?php echo $res_b_programa_estudios['tipo']; ?></td>
+                          <td><?php echo $res_b_programa_estudios['nombre']; ?></td>
+                          <td><?php echo $res_b_programa_estudios['resolucion']; ?></td>
                           <td>
-                            <a href="editar_docente.php?id=<?php echo $res_b_cargo['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_cargo.php?id=<?php echo $res_b_cargo['descripcion']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_programa_estudios['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_programa_estudios['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
