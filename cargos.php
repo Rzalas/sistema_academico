@@ -1,6 +1,7 @@
-<?php 
+<?php
 include "include/conexion.php";
 include "include/busquedas.php";
+include "include/verificar_sesion.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@ include "include/busquedas.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>inicio! | </title>
+    <title>Gentelella Alela! | </title>
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -33,47 +34,46 @@ include "include/busquedas.php";
       <div class="main_container">
         <?php include "include/menu.php" ?>  
         <!-- Menu en la parte superior -->
-        
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="row">
-          <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Sexo <span class="required">*</span>
-            </label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12">
-                <option value="">Seleccione</option>
-              <?php
-              $buscar_genero = buscarGenero ($conexion);
-              while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
-               ?>
-              <option value="<?php echo $res_b_genero['id']; ?>"><?php echo $res_b_genero['genero']; ?></option>
-               <?php
-              };
-              ?>
-              </select>
-          </div><br><br><br>
-          <div class="item form-group">
-          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Cargo <span class="required">*</span>
-            </label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12">
-                <option value="">Seleccione</option>
-              <?php
-              $buscar_cargo = buscarCargo($conexion);
-              while ($res_b_cargo = mysqli_fetch_array($buscar_cargo)) {
-               ?>
-              <option value="<?php echo $res_b_cargo['id']; ?>"><?php echo $res_b_cargo['descripcion']; ?></option>
-               <?php
-              };
-              ?>
-              </select>
-          </div>
-          </div>
-            <div class="col-md-8 col-sm-8 col-xs-12">
-              
+        <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Registro Cargos</h2>
+                    
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_cargo.php">
+
+                     
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">descripcion :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+
+                      
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="button">Cancelar</button>
+						  <button class="btn btn-primary" type="reset">Limpiar</button>
+                          <button type="submit" class="btn btn-success">Guardar</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
         <!-- /page content -->
         <!-- footer content -->

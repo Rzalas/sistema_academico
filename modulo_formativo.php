@@ -41,7 +41,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Modulo profesional</h2>
+                    <h2>Modulo Profesional</h2>
                     <ul class="nav navbar-right">
                       <li>
                         <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
@@ -56,14 +56,14 @@ include "include/verificar_sesion.php";
                         <tr>
                           <th>Id</th>
                           <th>DESCRIPCIÓN</th>
-                          <th>NRO MODULO</th>
-                          <th>ID PROGRAMA ESTUDIO</th>
+                          <th>nro_modulo</th>
+                          <th>id_programa_estudio </th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_modulo_profesional = buscarModulo_Profesional($conexion);
+                        $b_modulo_profesional = buscarModuloProfesional($conexion);
                         while ($res_b_modulo_profesional = mysqli_fetch_array($b_modulo_profesional)) {
                         ?>
                         <tr>

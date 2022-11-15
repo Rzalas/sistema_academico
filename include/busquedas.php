@@ -47,15 +47,25 @@ function buscarUsuarioDocenteById($conexion, $id){
     $sql = "SELECT * FROM usuarios_docentes WHERE id=$id";
     return mysqli_query($conexion, $sql);
 }
-function buscarDatos_institucionales($conexion){
+function buscarDatosinstitucionales($conexion){
     $sql = "SELECT * FROM datos_institucionales";
     return mysqli_query($conexion, $sql);
 }
-function buscarModulo_Profesional($conexion){
+function buscarModuloProfesional($conexion){
     $sql = "SELECT * FROM modulo_profesional";
     return mysqli_query($conexion, $sql);
 }
-
-
+function buscarUnidadDidactica($conexion){
+    $sql = "SELECT * FROM unidad_didactica";
+    return mysqli_query($conexion, $sql);
+}
+function buscarPresentePeriodoAcad($conexion){
+    $sql = "SELECT * FROM presente_periodo_acad";
+    return mysqli_query($conexion, $sql);
+}
+function buscarPeriodoAcademico($conexion){
+    $sql = "SELECT * FROM periodo_academico";
+    return mysqli_query($conexion, $sql);
+}
 
 ?>

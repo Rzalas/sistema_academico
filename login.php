@@ -30,6 +30,8 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
+            <img  width="150px" src="Gentella/img/logo.png" alt="">
+
             <form method="POST" action="operaciones/iniciar_sesion.php">
               <h1>Inicio de Sesión</h1>
               <div>
@@ -54,8 +56,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class=""></i> I.E.S.T.P. "HUANTA"</h1>
+                  <p>Bienvenido a la plataforma de Portafolio Docente, Inicie Sesion para acceder en modo Administrador</p>
                 </div>
               </div>
             </form>

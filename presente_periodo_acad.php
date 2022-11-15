@@ -41,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Cargo</h2>
+                    <h2>Presente Periodo Academico</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="cargos.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -55,21 +55,21 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>DESCRIPCIÓN</th>
+                          <th>id_periodo_acad </th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_cargo = buscarCargo($conexion);
-                        while ($res_b_cargo = mysqli_fetch_array($b_cargo)) {
+                        $b_presente_periodo_acad= buscarPresentePeriodoAcad($conexion);
+                        while ($res_b_presente_periodo_acad= mysqli_fetch_array($b_presente_periodo_acad)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_cargo['id']; ?></td>
-                          <td><?php echo $res_b_cargo['descripcion']; ?></td>
+                          <td><?php echo $res_b_presente_periodo_acad['id']; ?></td>
+                          <td><?php echo $res_b_presente_periodo_acad['id_periodo_acad']; ?></td>
                           <td>
-                            <a href="editar_docente.php?id=<?php echo $res_b_cargo['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_cargo.php?id=<?php echo $res_b_cargo['descripcion']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_presente_periodo_acad['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_presente_periodo_acad['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
