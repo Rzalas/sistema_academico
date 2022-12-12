@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Sistema academico! | </title>
-
+    <link rel="shortcut icon" href="Gentella/img/logoietsp (1).ico">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -30,7 +30,7 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <img  width="150px" src="Gentella/img/logo.png" alt="">
+            <img  width="150px" src="Gentella/img/logo1.png" alt="">
 
             <form method="POST" action="operaciones/iniciar_sesion.php">
               <h1>Inicio de Sesión</h1>

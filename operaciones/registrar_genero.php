@@ -9,7 +9,7 @@ if ($c_r_b_programa_estudios == 0) {//validamos que no haya registros en la base
 	$insertar = "INSERT INTO genero (genero) VALUES ('$gener')";
 	$ejecutar_insetar = mysqli_query($conexion, $insertar);
 
-    $b_id_genero = buscarEstudianteByDni($conexion, $gener);
+    $b_id_genero = buscarGenero($conexion, $gener);
 	$res_b_genero = mysqli_fetch_array( $b_id_genero);
 
 
