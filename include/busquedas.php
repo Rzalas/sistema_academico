@@ -71,5 +71,13 @@ function buscarProgramacionUniDidacti($conexion){
     $sql = "SELECT * FROM programacion_unidad_didactica";
     return mysqli_query($conexion, $sql);
 }
+function buscarUsuarioDocente($conexion){
+    $sql = "SELECT * FROM usuarios_docentes";
+    return mysqli_query($conexion, $sql);
+}
+function buscarUsuarioEstudiante($conexion){
+    $sql = "SELECT * FROM usuarios_estudiante";
+    return mysqli_query($conexion, $sql);
+}
 
 ?>
