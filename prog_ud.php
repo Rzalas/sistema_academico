@@ -1,8 +1,7 @@
 <?php 
-include "include/verificar_sesion.php";
 include "include/conexion.php"; 
 include "include/busquedas.php";
-
+include "include/verificar_sesion.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +11,7 @@ include "include/busquedas.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gentelella Alela! | </title>
+    <title>Programacion Unidad Didactica</title>
     <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +34,7 @@ include "include/busquedas.php";
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <?php include "include/menu.php"; ?>  
+        <?php include "include/menu.php" ?>  
         <!-- Menu en la parte superior -->
         <!-- page content -->
         <div class="right_col" role="main">
@@ -43,10 +42,10 @@ include "include/busquedas.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Relacion de Docentes</h2>
+                    <h2>Programacion Unidad Didactica</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="usu_docen.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="prog_u_didac.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -56,24 +55,32 @@ include "include/busquedas.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>id_docente </th>
-                          <th>usuario</th>
-                          <th>password</th>
+                          <th>Id</th>
+                          <th>id_unidad_didactica </th>
+                          <th>id_docente</th>
+                          <th>id_periodo_acad </th>
+                          <th>id_programa_estudio </th>
+                          <th>id_semestre </th>
+                          <th>cant_calificacion</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_docentes = buscarUsuarioDocente($conexion);
-                        while ($res_b_docentes = mysqli_fetch_array($b_docentes)) {
+                        $b_programacion_unidad_didactica = buscarProgramacionUniDidacti($conexion);
+                        while ($res_b_programacion_unidad_didactica = mysqli_fetch_array($b_programacion_unidad_didactica)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_docentes['id_docente']; ?></td>
-                          <td><?php echo $res_b_docentes['usuario']; ?></td>
-                          <td><?php echo $res_b_docentes['password'];  ?></td>
+                          <td><?php echo $res_b_programacion_unidad_didactica['id']; ?></td>
+                          <td><?php echo $res_b_programacion_unidad_didactica['id_unidad_didactica']; ?></td>
+                          <td><?php echo $res_b_programacion_unidad_didactica['id_docente']; ?></td>
+                          <td><?php echo $res_b_programacion_unidad_didactica['id_periodo_acad']; ?></td>
+                          <td><?php echo $res_b_programacion_unidad_didactica['id_programa_estudio']; ?></td>
+                          <td><?php echo $res_b_programacion_unidad_didactica['id_semestre']; ?></td>
+                          <td><?php echo $res_b_programacion_unidad_didactica['cant_calificacion']; ?></td>
                           <td>
-                            <a href="editar_usuarios_docentes.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_usuarios_docentes.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_programacion_unidad_didactica['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_programacion_unidad_didactica['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
@@ -133,12 +140,12 @@ include "include/busquedas.php";
     $('#example').DataTable({
       "language":{
     "processing": "Procesando...",
-    "lengthMenu": "Mostrar MENU registros",
+    "lengthMenu": "Mostrar _MENU_ registros",
     "zeroRecords": "No se encontraron resultados",
     "emptyTable": "Ningún dato disponible en esta tabla",
-    "sInfo": "Mostrando del START al END de un total de TOTAL registros",
+    "sInfo": "Mostrando del _START_ al _END_ de un total de _TOTAL_ registros",
     "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-    "infoFiltered": "(filtrado de un total de MAX registros)",
+    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
     "search": "Buscar:",
     "infoThousands": ",",
     "loadingRecords": "Cargando...",

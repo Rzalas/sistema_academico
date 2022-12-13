@@ -12,7 +12,6 @@ include "include/verificar_sesion.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gentelella Alela! | </title>
-    <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -42,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Programacion Unidad Didactica</h2>
+                    <h2>Calificaciones</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="califica.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -56,31 +55,25 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>id_unidad_didactica </th>
-                          <th>id_docente</th>
-                          <th>id_periodo_acad </th>
-                          <th>id_programa_estudio </th>
-                          <th>id_semestre </th>
-                          <th>cant_calificacion</th>
+                          <th>id_matricula </th>
+                          <th>nro_calificacion</th>
+                          <th>calificacion </th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_programacion_unidad_didactica = buscarProgramacionUniDidacti($conexion);
-                        while ($res_b_programacion_unidad_didactica = mysqli_fetch_array($b_programacion_unidad_didactica)) {
+                        $b_calificaciones = buscarCalificaciones($conexion);
+                        while ($res_b_calificaciones = mysqli_fetch_array($b_calificaciones)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_programacion_unidad_didactica['id']; ?></td>
-                          <td><?php echo $res_b_programacion_unidad_didactica['id_unidad_didactica ']; ?></td>
-                          <td><?php echo $res_b_programacion_unidad_didactica['id_docente']; ?></td>
-                          <td><?php echo $res_b_programacion_unidad_didactica['id_periodo_acad']; ?></td>
-                          <td><?php echo $res_b_programacion_unidad_didactica['id_programa_estudio']; ?></td>
-                          <td><?php echo $res_b_programacion_unidad_didactica['id_semestre']; ?></td>
-                          <td><?php echo $res_b_programacion_unidad_didactica['cant_calificacion']; ?></td>
+                          <td><?php echo $res_b_calificaciones['id']; ?></td>
+                          <td><?php echo $res_b_calificaciones['id_matricula']; ?></td>
+                          <td><?php echo $res_b_calificaciones['nro_calificacion']; ?></td>
+                          <td><?php echo $res_b_calificaciones['calificacion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_programacion_unidad_didactica['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_programacion_unidad_didactica['descripcion']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_calificaciones['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_calificaciones['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

@@ -1,8 +1,7 @@
 <?php 
-include "include/verificar_sesion.php";
 include "include/conexion.php"; 
 include "include/busquedas.php";
-
+include "include/verificar_sesion.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +12,6 @@ include "include/busquedas.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gentelella Alela! | </title>
-    <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -35,7 +33,7 @@ include "include/busquedas.php";
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <?php include "include/menu.php"; ?>  
+        <?php include "include/menu.php" ?>  
         <!-- Menu en la parte superior -->
         <!-- page content -->
         <div class="right_col" role="main">
@@ -43,10 +41,10 @@ include "include/busquedas.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Relacion usuario estudiante</h2>
+                    <h2>Matricula</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="matric.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -56,24 +54,32 @@ include "include/busquedas.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>id_estudiante</th>
-                          <th>usuario</th>
-                          <th>password</th>
+                          <th>Id</th>
+                          <th>id_periodo_acad  </th>
+                          <th>id_programa_estudio </th>
+                          <th>id_semestre  </th>
+                          <th>id_programacion_ud   </th>
+                          <th>id_estudiante  </th>
+                          <th>fecha_reg  </th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_estudiantes = buscarUsuarioEstudiante($conexion);
-                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                        $b_matricula = buscarMatricula($conexion);
+                        while ($res_b_matricula = mysqli_fetch_array($b_matricula)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_estudiantes['id_estudiante']; ?></td>
-                          <td><?php echo $res_b_estudiantes['usuario']; ?></td>
-                          <td><?php echo $res_b_estudiantes['password'];  ?></td>
+                          <td><?php echo $res_b_matricula['id']; ?></td>
+                          <td><?php echo $res_b_matricula['id_periodo_acad']; ?></td>
+                          <td><?php echo $res_b_matricula['id_programa_estudio']; ?></td>
+                          <td><?php echo $res_b_matricula['id_semestre']; ?></td>
+                          <td><?php echo $res_b_matricula['id_programacion_ud']; ?></td>
+                          <td><?php echo $res_b_matricula['id_estudiante']; ?></td>
+                          <td><?php echo $res_b_matricula['fecha_reg']; ?></td>
                           <td>
-                            <a href="editar_usuarios_docentes.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_usuarios_docentes.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_matricula['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_matricula['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
@@ -133,12 +139,12 @@ include "include/busquedas.php";
     $('#example').DataTable({
       "language":{
     "processing": "Procesando...",
-    "lengthMenu": "Mostrar MENU registros",
+    "lengthMenu": "Mostrar _MENU_ registros",
     "zeroRecords": "No se encontraron resultados",
     "emptyTable": "Ningún dato disponible en esta tabla",
-    "sInfo": "Mostrando del START al END de un total de TOTAL registros",
+    "sInfo": "Mostrando del _START_ al _END_ de un total de _TOTAL_ registros",
     "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-    "infoFiltered": "(filtrado de un total de MAX registros)",
+    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
     "search": "Buscar:",
     "infoThousands": ",",
     "loadingRecords": "Cargando...",

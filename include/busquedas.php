@@ -83,5 +83,10 @@ function buscarCalificaciones($conexion){
     $sql = "SELECT * FROM calificaciones";
     return mysqli_query($conexion, $sql);
 }
+function buscarMatricula($conexion){
+    $sql = "SELECT * FROM matricula";
+    return mysqli_query($conexion, $sql);
+}
+
 
 ?>
