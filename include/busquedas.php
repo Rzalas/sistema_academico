@@ -79,5 +79,9 @@ function buscarUsuarioEstudiante($conexion){
     $sql = "SELECT * FROM usuarios_estudiante";
     return mysqli_query($conexion, $sql);
 }
+function buscarCalificaciones($conexion){
+    $sql = "SELECT * FROM calificaciones";
+    return mysqli_query($conexion, $sql);
+}
 
 ?>

@@ -41,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Modulo Profesional</h2>
+                    <h2>Calificaciones</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="modu_forma.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -55,25 +55,25 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>DESCRIPCIÓN</th>
-                          <th>nro_modulo</th>
-                          <th>id_programa_estudio </th>
+                          <th>id_matricula </th>
+                          <th>nro_calificacion</th>
+                          <th>calificacion </th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_modulo_profesional = buscarModuloProfesional($conexion);
-                        while ($res_b_modulo_profesional = mysqli_fetch_array($b_modulo_profesional)) {
+                        $b_calificaciones = buscarCalificaciones($conexion);
+                        while ($res_b_calificaciones = mysqli_fetch_array($b_calificaciones)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_modulo_profesional['id']; ?></td>
-                          <td><?php echo $res_b_modulo_profesional['descripcion']; ?></td>
-                          <td><?php echo $res_b_modulo_profesional['nro_modulo']; ?></td>
-                          <td><?php echo $res_b_modulo_profesional['id_programa_estudio']; ?></td>
+                          <td><?php echo $res_b_calificaciones['id']; ?></td>
+                          <td><?php echo $res_b_calificaciones['id_matricula']; ?></td>
+                          <td><?php echo $res_b_calificaciones['nro_calificacion']; ?></td>
+                          <td><?php echo $res_b_calificaciones['calificacion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_modulo_profesional['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_modulo_profesional['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_calificaciones['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_calificaciones['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
