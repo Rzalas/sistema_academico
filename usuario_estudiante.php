@@ -12,7 +12,7 @@ include "include/busquedas.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gentelella Alela! | </title>
+    <title>usuario estudiante</title>
     <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@ include "include/busquedas.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Relacion usuario estudiante</h2>
+                    <h2>usuario estudiante</h2>
                     <ul class="nav navbar-right">
                       <li>
                         <a href="usu_estud.php" class="btn btn-success">Agregar Nuevo</a>
