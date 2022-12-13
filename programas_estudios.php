@@ -12,6 +12,7 @@ include "include/verificar_sesion.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gentelella Alela! | </title>
+    <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -52,7 +53,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">codigo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="codigo" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="codigo" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 

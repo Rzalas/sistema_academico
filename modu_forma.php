@@ -11,7 +11,8 @@ include "include/verificar_sesion.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registro de presente periodo academico</title>
+    <title>Gentelella Alela! | </title>
+    <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -40,22 +41,25 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Registro de presente periodo academico</h2>
+                    <h2>Registro Modulo formativo</h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_present_perio_acad.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_modulo_profesional.php">
 
-                      
+                     
+
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Descripcion:
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">descripcion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
+
+                      
                       
                       <div class="ln_solid"></div>
                       <div class="form-group">
