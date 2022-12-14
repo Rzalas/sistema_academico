@@ -54,7 +54,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">nombre:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="nombre" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="nom"required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
@@ -62,7 +62,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">fecha_inicio:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_inicio" class="date-picker form-control col-md-7 col-xs-12" required="required" >
+                          <input type="date" name="fecha_inicio"class="date-picker form-control col-md-7 col-xs-12" required="required" >
                         </div>
                       </div>
 
@@ -70,7 +70,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">fecha_fin:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_fin" class="date-picker form-control col-md-7 col-xs-12" required="required" >
+                          <input type="date" name="fecha_fin"class="date-picker form-control col-md-7 col-xs-12" required="required" >
                         </div>
                       </div>
 
@@ -78,7 +78,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">director:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="director" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="director"required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
@@ -86,7 +86,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">fecha_actas:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_actas" class="date-picker form-control col-md-7 col-xs-12" required="required" >
+                          <input type="date" name="fecha_actas"class="date-picker form-control col-md-7 col-xs-12" required="required" >
                         </div>
                       </div>
                         

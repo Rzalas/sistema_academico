@@ -54,7 +54,8 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">cod_modular :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="cod_modular" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="number" class="form-control" name="cod_modular" id="cod_modular" required="" value="0671107" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" disabled="">
+                      
                         </div>
                       </div>
 
@@ -62,7 +63,8 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">ruc :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="ruc" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="number" class="form-control" name="ruc" id="ruc" required="" value="20449519320" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" disabled="">
+                         
                         </div>
                       </div>
 
@@ -70,7 +72,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name"> nombre_institucion:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="nombre_institucion" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" class="form-control" name="nombre" id="nombre" required="" value="INSTITUTO DE EDUCACION SUPERIOR TECNOLOGICO PUBLICO HUANTA" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" disabled="">
                         </div>
                       </div>
 
@@ -78,7 +80,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name"> departamento:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="departamento" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" class="form-control" name="dep" id="dep" required="" value="AYACUCHO" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" disabled="">
                         </div>
                       </div>
 
@@ -86,7 +88,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name"> provincia:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="provincia" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" class="form-control" name="provincia" id="provincia" required="" value="HUANTA" disabled="">
                         </div>
                       </div>
 
@@ -94,7 +96,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name"> distrito:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="distrito" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" class="form-control" name="distrito" id="distrito" required="" value="HUANTA" disabled="">
                         </div>
                       </div>
 
@@ -102,7 +104,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name"> direccion:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="direccion" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" class="form-control" name="direccion" id="direccion" required="" value="JR. CORDOVA 650" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" disabled="">
                         </div>
                       </div>
 
@@ -110,7 +112,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">telefono :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="telofono" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="number" class="form-control" name="telefono" id="telefono" required="" value="99999999" disabled="">                        
                         </div>
                       </div>
 
@@ -118,7 +120,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Correo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" name="correo" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" class="form-control" name="email" id="email" required="" value="iestphuanta@iestphuanta.edu.pe" disabled="">
                         </div>
                       </div>
 
@@ -128,7 +130,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">nro_resolucion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="nro_resolucion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" class="form-control" name="resolucion" id="resolucion" required="" value="RD. 095-86" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" disabled="">
                         </div>
                       </div>
                       

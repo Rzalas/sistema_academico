@@ -12,6 +12,7 @@ include "include/verificar_sesion.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registro de presente periodo academico</title>
+    <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -50,10 +51,10 @@ include "include/verificar_sesion.php";
 
                       
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Descripcion:
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">id_periodo_acad :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="id_periodo_acad " required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       

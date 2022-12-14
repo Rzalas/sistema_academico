@@ -57,10 +57,10 @@ include "include/verificar_sesion.php";
                         <tr>
                           <th>Id</th>
                           <th>nombre</th>
-                          <th>fecha_inicio</th>
-                          <th>fecha_fin</th>
+                          <th>fecha inicio</th>
+                          <th>fecha fin</th>
                           <th>director</th>
-                          <th>fecha_actas</th>
+                          <th>fecha actas</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
