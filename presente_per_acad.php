@@ -70,7 +70,7 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_presente_periodo_academico['id_periodo_acad']; ?></td>
                           <td>
                             <a href="editar_presente_periodo_acad.php?id=<?php echo $res_b_presente_periodo_academico['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_presente_periodo_acad.php?id=<?php echo $res_b_presente_periodo_academico['id']; ?>" class="btn btn-danger">Eliminar</a>
+                           
                           </td>
                         </tr>
                         <?php

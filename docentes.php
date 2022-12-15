@@ -79,7 +79,7 @@ include "include/busquedas.php";
                           <td><?php echo $res_b_docentes['telefono']; ?></td>
                           <td>
                             <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            
                           </td>
                         </tr>
                         <?php
