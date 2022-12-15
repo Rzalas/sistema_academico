@@ -47,47 +47,91 @@ include "include/verificar_sesion.php";
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_cargo.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_matricu.php">
 
                      
-
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">id_periodo_acad   :
-                        </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">id_periodo_acad :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="id_periodo_acad  " required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="id_periodo_acad" id="id_periodo_acad" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $b_periodo_academico = buscarPeriodoAcademico($conexion);
+                          while ($res_b_periodo_academico = mysqli_fetch_array($b_periodo_academico)) {
+                          ?>
+                          <option value="<?php echo $res_b_periodo_academico['id']; ?>"><?php echo $res_b_periodo_academico['nombre']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">id_programa_estudio    :
-                        </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">id_programa_estudio :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="id_programa_estudio   " required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="id_programa_estudio" id="id_programa_estudio" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $b_programa_estudios = buscarProgramaEstudio($conexion);
+                          while ($res_b_programa_estudios = mysqli_fetch_array($b_programa_estudios)) {
+                          ?>
+                          <option value="<?php echo $res_b_programa_estudios['id']; ?>"><?php echo $res_b_programa_estudios['codigo']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">id_semestre   :
-                        </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">id_semestre :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="id_semestre  " required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="id_semestre" id="id_semestre" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $b_semestre = buscarSemestre($conexion);
+                          while ($res_b_semestre = mysqli_fetch_array($b_semestre)) {
+                          ?>
+                          <option value="<?php echo $res_b_semestre['id']; ?>"><?php echo $res_b_semestre['descripcion']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">id_programacion_ud     :
-                        </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">id_programacion_ud :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="id_programacion_ud    " required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="id_programacion_ud" id="id_programacion_ud" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $b_programacion_unidad_didactica = buscarProgramacionUniDidacti($conexion);
+                          while ($res_b_programacion_unidad_didactica = mysqli_fetch_array($b_programacion_unidad_didactica)) {
+                          ?>
+                          <option value="<?php echo $res_b_programacion_unidad_didactica['id']; ?>"><?php echo $res_b_programacion_unidad_didactica['id_unidad_didactica']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">id_estudiante      :
-                        </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">id_estudiante :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="id_estudiante     " required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="id_estudiante" id="id_estudiante" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $b_estudiantes = buscarEstudiantes($conexion);
+                          while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                          ?>
+                          <option value="<?php echo $res_b_estudiantes['id']; ?>"><?php echo $res_b_estudiantes['dni']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
 

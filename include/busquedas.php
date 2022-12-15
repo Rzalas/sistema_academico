@@ -59,6 +59,11 @@ function buscarUnidadDidactica($conexion){
     $sql = "SELECT * FROM unidad_didactica";
     return mysqli_query($conexion, $sql);
 }
+
+function buscarUnidadDidacticaByDescrip($conexion,$descripcion){
+    $sql = "SELECT * FROM unidad_didactica WHERE descripcion='$descripcion'";
+    return mysqli_query($conexion, $sql);
+}
 function buscarPresentePeriodoAcad($conexion){
     $sql = "SELECT * FROM presente_periodo_acad";
     return mysqli_query($conexion, $sql);
@@ -89,6 +94,10 @@ function buscarCalificaciones($conexion){
 }
 function buscarMatricula($conexion){
     $sql = "SELECT * FROM matricula";
+    return mysqli_query($conexion, $sql);
+}
+function buscarMatriculaById($conexion,$matri){
+    $sql = "SELECT * FROM matricula WHERE id_periodo_acad=$matri";
     return mysqli_query($conexion, $sql);
 }
 

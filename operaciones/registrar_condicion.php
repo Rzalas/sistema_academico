@@ -30,3 +30,4 @@ if ($c_r_b_cargo == 0) {//validamos que no haya registros en la base de datos
 	}
 
 }
+?>

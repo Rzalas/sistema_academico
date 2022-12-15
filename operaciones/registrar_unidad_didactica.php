@@ -7,15 +7,15 @@ $proes      = $_POST['id_programa_estudio'];
 $modu   = $_POST['id_modulo'];
 $semes = $_POST['id_semestre'];
 $cred    = $_POST['creditos'];
-$hou       = $_POST['houra'];
+$houra       = $_POST['horas'];
 $tip    = $_POST['tipo'];
 $rdn = $_POST['orden'];
 
-$b_descripcion = buscarUnidadDidactica($conexion, $descripcion);
+$b_descripcion = buscarUnidadDidacticaByDescrip($conexion, $descripcion);
 $c_r_b_descripcion = mysqli_num_rows($b_descripcion);
 if ($c_r_b_descripcion == 0) {
 	echo "hola";
-	$insertar = "INSERT INTO unidad_didactica(descripcion, id_programa_estudio, id_modulo, id_semestre,creditos,houra,tipo,orden) VALUES ('$dscrip','$proes','$modu', '$semes', '$cred', '$hou', '$tip', '$rdn')";
+	$insertar = "INSERT INTO unidad_didactica(descripcion,id_programa_estudio,id_modulo,id_semestre,creditos,horas,tipo,orden) VALUES ('$descripcion','$proes','$modu','$semes','$cred','$houra','$tip','$rdn')";
 	$ejecutar_insetar = mysqli_query($conexion, $insertar);
 	
 	
@@ -32,12 +32,5 @@ if ($c_r_b_descripcion == 0) {
 			</script>
 			";
 		}
-	}else{
-		echo "<script>
-				alert('unidad ya existe, error al guardar');
-				window.history.back();
-				</script>
-				";
 	}
-
 ?>

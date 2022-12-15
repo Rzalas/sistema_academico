@@ -67,7 +67,7 @@ include "include/verificar_sesion.php";
                           $buscar_unidad_didactica = buscarProgramaEstudio($conexion);
                           while ($res_b_unidad_didactica = mysqli_fetch_array($buscar_unidad_didactica)) {
                           ?>
-                          <option value="<?php echo $res_b_unidad_didactica['id']; ?>"><?php echo $res_b_unidad_didactica['id']; ?></option>
+                          <option value="<?php echo $res_b_unidad_didactica['id']; ?>"><?php echo $res_b_unidad_didactica['codigo']; ?></option>
                           <?php
                           };
                           ?>
@@ -122,7 +122,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">hora :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="hour" name="houra" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="hour" name="horas" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
