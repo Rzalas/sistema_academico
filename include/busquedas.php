@@ -59,7 +59,6 @@ function buscarUnidadDidactica($conexion){
     $sql = "SELECT * FROM unidad_didactica";
     return mysqli_query($conexion, $sql);
 }
-
 function buscarUnidadDidacticaByDescrip($conexion,$descripcion){
     $sql = "SELECT * FROM unidad_didactica WHERE descripcion='$descripcion'";
     return mysqli_query($conexion, $sql);
@@ -90,6 +89,10 @@ function buscarUsuarioEstudiante($conexion){
 }
 function buscarCalificaciones($conexion){
     $sql = "SELECT * FROM calificaciones";
+    return mysqli_query($conexion, $sql);
+}
+function buscarCalificacionesByIdM($conexion,$idmatric){
+    $sql = "SELECT * FROM calificaciones WHERE id_matricula=$idmatric";
     return mysqli_query($conexion, $sql);
 }
 function buscarMatricula($conexion){

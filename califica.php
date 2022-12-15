@@ -47,23 +47,31 @@ include "include/verificar_sesion.php";
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_cargo.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_calificacion.php">
 
-                     
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">id_matricula    :
-                        </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">matricula :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="id_matricula   " required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="id_matricula" id="id_matricula" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $b_matricula = buscarMatricula($conexion);
+                          while ($res_b_matricula = mysqli_fetch_array($b_matricula)) {
+                          ?>
+                          <option value="<?php echo $res_b_matricula['id']; ?>"><?php echo $res_b_matricula['id_periodo_acad']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">nro_calificacion    :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">numero calificacion    :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="nro_calificacion   " required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="nro_calificacion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
@@ -71,7 +79,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">calificacion   :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="calificacion  " required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="calificacion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
