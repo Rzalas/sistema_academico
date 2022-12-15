@@ -6,9 +6,9 @@ $nroalifi= $_POST['nro_calificacion'];
 $califica= $_POST['calificacion'];
 echo "hola";
 $b_idmatricula= buscarCalificacionesByIdM($conexion,$idmatricula);
-$c_r_b_idmatricula= mysqli_num_rows($b_idmatri);
+$c_r_b_idmatricula= mysqli_num_rows($b_idmatricula);
 if ($c_r_b_idmatricula== 0) {//validamos que no haya registros en la base de datos
-	$insertar = "INSERT INTO calificaciones(id_matricula,nro_calificacion,calificacion) VALUES ('$idmatric','$nroalifi','$califica')";
+	$insertar = "INSERT INTO calificaciones(id_matricula,nro_calificacion,calificacion) VALUES ('$idmatricula','$nroalifi','$califica')";
 	$ejecutar_insetar = mysqli_query($conexion, $insertar);
 
 

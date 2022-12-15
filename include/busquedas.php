@@ -91,8 +91,8 @@ function buscarCalificaciones($conexion){
     $sql = "SELECT * FROM calificaciones";
     return mysqli_query($conexion, $sql);
 }
-function buscarCalificacionesByIdM($conexion,$idmatric){
-    $sql = "SELECT * FROM calificaciones WHERE id_matricula=$idmatric";
+function buscarCalificacionesByIdM($conexion,$idmatricula){
+    $sql = "SELECT * FROM calificaciones WHERE id_matricula=$idmatricula";
     return mysqli_query($conexion, $sql);
 }
 function buscarMatricula($conexion){
