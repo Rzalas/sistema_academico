@@ -65,7 +65,7 @@ $res_b_cargo = mysqli_fetch_array($busc_cargo);
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <a href="cargo.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
+                          <a href="Cargo.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
                           
 						              <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Actualizar Datos</button>

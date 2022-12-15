@@ -4,7 +4,7 @@ include "include/busquedas.php";
 include "include/verificar_sesion.php";
 
 $id_unidad_didactica = $_GET['id'];
-$busc_unidad_didactica = buscarUnidadDidacticaByDescrip($conexion, $id_unidad_didactica);
+$busc_unidad_didactica = buscarUnidDidacById($conexion, $id_unidad_didactica);
 $res_b_unidad_didactica = mysqli_fetch_array($busc_unidad_didactica);
 
 ?>
@@ -46,14 +46,14 @@ $res_b_unidad_didactica = mysqli_fetch_array($busc_unidad_didactica);
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                  <h2>Editar Estudiante</h2>
+                  <h2>Editar unidad_didactica</h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_udidact.php">
-                    <input type="hidden" name="id" value="<?php echo $id_unidad_didactica;?>">
+                        <input type="hidden" name="id" value="<?php echo $id_unidad_didactica;?>">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Descripcion :
                         </label>
@@ -162,12 +162,25 @@ $res_b_unidad_didactica = mysqli_fetch_array($busc_unidad_didactica);
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <a href="unidad_didactica.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
+                          <a href="UnidadesDidacticas.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
                           
 						              <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Actualizar Datos</button>
                         </div>
                       </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+<?php
+include "include/footer.php";
+
+?>
 
                     </form>
                   </div>
