@@ -63,8 +63,12 @@ function buscarPresentePeriodoAcad($conexion){
     $sql = "SELECT * FROM presente_periodo_acad";
     return mysqli_query($conexion, $sql);
 }
-function buscarPeriodoAcademico($conexion){
+function buscarPeriodoAcademico($conexion,){
     $sql = "SELECT * FROM periodo_academico";
+    return mysqli_query($conexion, $sql);
+}
+function buscarPeriodoAcademicoByName($conexion,$nombre){
+    $sql = "SELECT * FROM periodo_academico WHERE nombre='$nombre'";
     return mysqli_query($conexion, $sql);
 }
 function buscarProgramacionUniDidacti($conexion){

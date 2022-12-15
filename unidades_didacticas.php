@@ -61,10 +61,10 @@ include "include/verificar_sesion.php";
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">programa de estudios :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="id_programa_estudio " id="id_programa_estudio " class="form-control col-md-7 col-xs-12">
+                        <select name="id_programa_estudio" id="id_programa_estudio " class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_unidad_didactica = buscarUnidadDidactica($conexion);
+                          $buscar_unidad_didactica = buscarProgramaEstudio($conexion);
                           while ($res_b_unidad_didactica = mysqli_fetch_array($buscar_unidad_didactica)) {
                           ?>
                           <option value="<?php echo $res_b_unidad_didactica['id']; ?>"><?php echo $res_b_unidad_didactica['id']; ?></option>
@@ -78,10 +78,10 @@ include "include/verificar_sesion.php";
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">modulo :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="id_modulo  " id="id_modulo  " class="form-control col-md-7 col-xs-12">
+                        <select name="id_modulo" id="id_modulo" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_unidad_didactica = buscarUnidadDidactica($conexion);
+                          $buscar_unidad_didactica = buscarModuloProfesional($conexion);
                           while ($res_b_unidad_didactica = mysqli_fetch_array($buscar_unidad_didactica)) {
                           ?>
                           <option value="<?php echo $res_b_unidad_didactica['id']; ?>"><?php echo $res_b_unidad_didactica['descripcion']; ?></option>
@@ -95,10 +95,10 @@ include "include/verificar_sesion.php";
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">semestre :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="id_semestre  " id="id_semestre  " class="form-control col-md-7 col-xs-12">
+                        <select name="id_semestre" id="id_semestre" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_unidad_didactica = buscarUnidadDidactica($conexion);
+                          $buscar_unidad_didactica = buscarSemestre($conexion);
                           while ($res_b_unidad_didactica = mysqli_fetch_array($buscar_unidad_didactica)) {
                           ?>
                           <option value="<?php echo $res_b_unidad_didactica['id']; ?>"><?php echo $res_b_unidad_didactica['descripcion']; ?></option>
@@ -122,7 +122,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">hora :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="hour" name="hour" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="hour" name="houra" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
@@ -130,7 +130,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">tipo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="tipo" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 

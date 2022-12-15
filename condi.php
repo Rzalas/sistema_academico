@@ -47,7 +47,7 @@ include "include/verificar_sesion.php";
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_cargo.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_condicion.php">
 
                      
 

@@ -55,22 +55,22 @@ include "include/verificar_sesion.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Id</th>
+                          <th>id</th>
                           <th>id_periodo_acad</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_presente_periodo_acad= buscarPresentePeriodoAcad($conexion);
-                        while ($res_b_presente_periodo_acad= mysqli_fetch_array($b_presente_periodo_acad)) {
+                        $b_presente_periodo_academico= buscarPresentePeriodoAcad($conexion);
+                        while ($res_b_presente_periodo_academico= mysqli_fetch_array($b_presente_periodo_academico)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_presente_periodo_acad['id']; ?></td>
-                          <td><?php echo $res_b_presente_periodo_acad['id_periodo_acad']; ?></td>
+                          <td><?php echo $res_b_presente_periodo_academico['id']; ?></td>
+                          <td><?php echo $res_b_presente_periodo_academico['id_periodo_acad']; ?></td>
                           <td>
-                            <a href="editar_presente_periodo_acad.php?id=<?php echo $res_b_presente_periodo_acad['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_presente_periodo_acad.php?id=<?php echo $res_b_presente_periodo_acad['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_presente_periodo_acad.php?id=<?php echo $res_b_presente_periodo_academico['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_presente_periodo_acad.php?id=<?php echo $res_b_presente_periodo_academico['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
