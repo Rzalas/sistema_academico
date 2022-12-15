@@ -112,7 +112,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">telefono :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="number" class="form-control" name="telefono" id="telefono" required="" value="99999999" disabled="">                        
+                        <input type="number" class="form-control" name="telefono" id="telefono" required="" value="913543765" disabled="">                        
                         </div>
                       </div>
 
