@@ -3,8 +3,16 @@ function buscarGenero($conexion){
     $sql = "SELECT * FROM genero";
     return mysqli_query($conexion, $sql);
 }
+function buscarGeneroById($conexion,$id){
+    $sql = "SELECT * FROM genero WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
 function buscarCargo($conexion){
     $sql = "SELECT * FROM cargo";
+    return mysqli_query($conexion, $sql);
+}
+function buscarCargoById($conexion,$id){
+    $sql = "SELECT * FROM cargo WHERE id='$id'";
     return mysqli_query($conexion, $sql);
 }
 function buscarProgramaEstudio($conexion){
@@ -49,6 +57,10 @@ function buscarUsuarioDocenteById($conexion, $id){
 }
 function buscarDatosinstitucionales($conexion){
     $sql = "SELECT * FROM datos_institucionales";
+    return mysqli_query($conexion, $sql);
+}
+function buscarDatosInstByCodModular($conexion, $cod_modular){
+    $sql = "SELECT * FROM datos_institucionales WHERE cod_modular=$cod_modular";
     return mysqli_query($conexion, $sql);
 }
 function buscarModuloProfesional($conexion){

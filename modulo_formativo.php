@@ -73,8 +73,8 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_modulo_profesional['nro_modulo']; ?></td>
                           <td><?php echo $res_b_modulo_profesional['id_programa_estudio']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_modulo_profesional['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_modulo_profesional['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_modufo.php?id=<?php echo $res_b_modulo_profesional['id']; ?>" class="btn btn-primary">Editar</a>
+                            
                           </td>
                         </tr>
                         <?php

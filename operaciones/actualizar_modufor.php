@@ -2,19 +2,19 @@
 include "../include/conexion.php";
 include "../include/busquedas.php";
 $id = $_POST['id'];
-$cod = $_POST['codigo'];
-$tipo = $_POST['tipo'];
-$nom = $_POST['nombre'];
-$reso = $_POST['resolucion'];
+$descripcion = $_POST['descripcion'];
+$nro_modulo = $_POST['nro_modulo'];
+$id_programa_estudio = $_POST['id_programa_estudio'];
 
 
-$sql = "UPDATE programa_estudios SET codigo='$cod', tipo='$tipo', nombre='$nom', resolucion='$reso' WHERE id='$id'";
+$sql = "UPDATE modulo_profesional SET descripcion='$descripcion', nro_modulo='$nro_modulo', id_programa_estudio='$id_programa_estudio' WHERE id='$id'";
+
 $ejec_consulta = mysqli_query($conexion, $sql);
 
 if ($ejec_consulta) {
     echo "<script>
 					alert('Datos actualizados de manera Correcta');
-					window.location= '../programa_estudios.php';
+					window.location= '../modulo_formativo.php';
 				</script>
 			";
 }else{

@@ -69,8 +69,8 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_semestre['id']; ?></td>
                           <td><?php echo $res_b_semestre['descripcion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_semestre['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_semestre['descripcion']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_semestre.php?id=<?php echo $res_b_semestre['id']; ?>" class="btn btn-primary">Editar</a>
+                            
                           </td>
                         </tr>
                         <?php

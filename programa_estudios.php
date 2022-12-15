@@ -76,8 +76,8 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_programa_estudios['nombre']; ?></td>
                           <td><?php echo $res_b_programa_estudios['resolucion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_programa_estudios['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_programa_estudios['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_proestu.php?id=<?php echo $res_b_programa_estudios['id']; ?>" class="btn btn-primary">Editar</a>
+                           
                           </td>
                         </tr>
                         <?php

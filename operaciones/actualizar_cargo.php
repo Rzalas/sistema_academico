@@ -2,19 +2,17 @@
 include "../include/conexion.php";
 include "../include/busquedas.php";
 $id = $_POST['id'];
-$cod = $_POST['codigo'];
-$tipo = $_POST['tipo'];
-$nom = $_POST['nombre'];
-$reso = $_POST['resolucion'];
+$cargo = $_POST['cargo'];
 
 
-$sql = "UPDATE programa_estudios SET codigo='$cod', tipo='$tipo', nombre='$nom', resolucion='$reso' WHERE id='$id'";
+$sql = "UPDATE cargo SET descripcion='$cargo'WHERE id='$id'";
+
 $ejec_consulta = mysqli_query($conexion, $sql);
 
 if ($ejec_consulta) {
     echo "<script>
 					alert('Datos actualizados de manera Correcta');
-					window.location= '../programa_estudios.php';
+					window.location= '../cargo.php';
 				</script>
 			";
 }else{
