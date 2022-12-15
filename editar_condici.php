@@ -3,9 +3,10 @@ include "include/conexion.php";
 include "include/busquedas.php";
 include "include/verificar_sesion.php";
 
-$id_cargo = $_GET['id'];
-$busc_cargo = buscarCargoById($conexion, $id_cargo);
-$res_b_cargo = mysqli_fetch_array($busc_cargo);
+$id_condicion = $_GET['id'];
+$busc_condicion = buscarCondicionById($conexion, $id_condicion);
+$res_b_condicion = mysqli_fetch_array($busc_condicion);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@ $res_b_cargo = mysqli_fetch_array($busc_cargo);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar Cargo </title>
+    <title>Gentelella Alela! | </title>
     <link rel="shortcut icon" href="Gentella/img/logo1.png">
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,32 +46,40 @@ $res_b_cargo = mysqli_fetch_array($busc_cargo);
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                  <h2>Editar cargo</h2>
+                  <h2>Editar condicion</h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_cargo.php">
-                        <input type="hidden" name="id" value="<?php echo $id_cargo;?>">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_condi.php">
+                        <input type="hidden" name="id" value="<?php echo $id_condicion;?>">
                       
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Cargo :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Descripcion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="cargo" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_cargo['descripcion']; ?>">
+                          <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_condicion['descripcion']; ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Codigo :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="codigo" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_condicion['codigo']; ?>">
                         </div>
                       </div>
                      
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <a href="Cargo.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
+                          <a href="Condicion.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
                           
 						              <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Actualizar Datos</button>
                         </div>
                       </div>
+
 
                     </form>
                   </div>

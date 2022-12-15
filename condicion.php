@@ -71,8 +71,8 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_condicion['descripcion']; ?></td>
                           <td><?php echo $res_b_condicion['codigo']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_condicion['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_condicion['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_condici.php?id=<?php echo $res_b_condicion['id']; ?>" class="btn btn-primary">Editar</a>
+                            
                           </td>
                         </tr>
                         <?php
