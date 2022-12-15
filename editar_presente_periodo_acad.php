@@ -3,9 +3,9 @@ include "include/conexion.php";
 include "include/busquedas.php";
 include "include/verificar_sesion.php";
 
-$id_docente = $_GET['id'];
-$b_presente_periodo_academico = buscarPresentePeriodoAcad($conexion, $id_docente);
-$res_b_docente = mysqli_fetch_array($busc_docente);
+$id_presente_periodo_academico = $_GET['id'];
+$b_presente_periodo_academico = buscarPresentePeriodoAcad($conexion, $id_presente_periodo_academico);
+$res_b_presente_periodo_academico= mysqli_fetch_array($busc_presente_periodo_academico);
 
 ?>
 <!DOCTYPE html>
@@ -53,12 +53,12 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
                   <div class="x_content">
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_presperiacad.php">
-                    <input type="hidden" name="id" value="<?php echo $id_docente;?>">
+                    <input type="hidden" name="id" value="<?php echo $id_presente_periodo_academico;?>">
 
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Cargo :</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="id_cargo" id="id_cargo" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['id_cargo']; ?>">
+                        <select name="id_cargo" id="id_cargo" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_presente_periodo_academico['id_cargo']; ?>">
                           <option value="">Seleccione</option>
                           <?php
                           $id_cargo_docente = $res_b_docente['id_cargo'];
@@ -81,7 +81,7 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <a href="Docentes.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
+                          <a href="presente_per_acad.php"><button class="btn btn-primary" type="button">Cancelar</button></a>
                           
 						    <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Actualizar Datos</button>
